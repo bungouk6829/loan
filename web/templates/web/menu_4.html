@@ -1,0 +1,71 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+
+{%block korean%}
+        보유중장비
+{%endblock%}
+
+{%block english%}
+        Equipment Holdings
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='equipment'%}"><li>보유중장비</li></a>
+{%endblock%}
+
+<!--컨테이너-->
+{%block page%}
+        | 보유 중장비
+{%endblock%}
+
+{%block container%}
+    <div class="content_box">
+      <div class="equipment_box">
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/035.png'%}">
+          <h1>포크레인035</h1>
+          <h2>보유현황 1대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/035.png'%}">
+          <h1>포크레인017</h1>
+          <h2>보유현황 1대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/06w.png'%}">
+          <h1>포크레인 06W</h1>
+          <h2>보유현황 1대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/08w.jpg'%}">
+          <h1>포크레인08W</h1>
+          <h2>보유현황 2대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/10lc.jpg'%}">
+          <h1>포크레인10LC</h1>
+          <h2>보유현황 1대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/mighty.jpg'%}">
+          <h1>3.5톤 마이티</h1>
+          <h2>보유현황 3대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/bongo.jpg'%}">
+          <h1>1톤 트럭</h1>
+          <h2>보유현황 4대</h2>
+        </div>
+        <div class="equipment_img_box">
+          <img src="{%static 'web/img/dumptruck.png'%}">
+          <h1>25톤 덤프트럭</h1>
+          <h2>보유현황 1대</h2>
+        </div>
+      </div>
+      <div class="equipment_gallery_box">
+        <img src="{%static 'web/img/eq_1.jpg'%}">
+        <img src="{%static 'web/img/eq_2.jpg'%}">
+        <img src="{%static 'web/img/eq_3.jpg'%}">
+      </div>
+    </div>
+{%endblock%}

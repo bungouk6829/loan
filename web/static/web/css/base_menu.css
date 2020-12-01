@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+#block_wrap_section{
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  padding-bottom: 50px;
+}
+
+#menu_wrap_section{
+  text-align: center;
+  width: 200px;
+  height: auto;
+  float: left;
+}
+
+#menu_name{
+  height: 80px;
+  padding-top: 50px;
+}
+
+#menu_name h1{
+  line-height: 25px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.korean{
+  color:#122B88;
+}
+
+.english{
+  color:#f8b533;
+}
+
+#content_menu{
+  padding-top: 50px;
+}
+
+#content_menu img{
+  width: 170px;
+  height: 25px;
+}
+
+#content_menu ul li{
+  color: #4d4d4d;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#content_menu ul li:nth-child(1){
+  padding-top: 20px;
+}
+
+#content_menu ul li:last-child{
+  padding-bottom: 20px;
+}
+
+#call_center_box{
+  margin-top: 50px;
+  margin-left: 8%;
+  padding: 5px 3px;
+  text-align: center;
+  width: 80%;
+  height: 100px;
+  border: 0.5px solid #cfcfcf;
+  line-height: 20px;
+  background: #f8b533;
+  border-radius: 3px;
+}
+
+#call_center_box h1{
+  color:black;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#call_center_box img{
+  width: 30px;
+  height: 30px;
+}
+
+#call_center_box img, h2{
+  display: inline;
+}
+
+#call_center_box h2{
+  color:#122B88;
+  font-size: 18px;
+}
+
+#call_center_box p{
+  color:#122B88;
+  font-size: 15px;
+}
+
+#container_section{
+	height:auto;
+  float: left;
+  width: 960px;
+  background: #ebebeb;
+  border-radius: 2px;
+  border: 0.5px solid #d9d9d9;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #c4c4c4;
+  padding-bottom:30px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-left: 50px;
+}
+
+.container_name{
+  text-align: left;
+}
+
+.container_name h1{
+  color:gray;
+  font-size: 20px;
+}
+
+.content_box{
+  height:auto;
+  background: white;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+@media all and (max-width:1280px) {
+
+  #block_wrap_section{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  #menu_wrap_section{
+    display:none;
+  }
+
+  #container_section{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    min-height:500px;
+  }
+
+  .container_name{
+    display: none;
+  }
+
+  .content_box{
+    margin: 0px;
+    padding: 0px;
+    margin-top:70px;
+    overflow: hidden;
+    min-height:500px;
+  }
+
+}

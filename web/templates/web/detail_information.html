@@ -1,0 +1,84 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+{%load  custom_tag%}
+
+{%block korean%}
+        문의하기
+{%endblock%}
+
+{%block english%}
+        Information
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='notice'%}"><li>공지사항</li></a>
+        <a href="{%url 'web:menu' page='information'%}"><li>문의하기</li></a>
+{%endblock%}
+
+
+<!--컨테이너-->
+{%block page%}
+          | 문의하기
+{%endblock%}
+
+{%block container%}
+      <div class="display_none">
+        <h1>{{information_post.update_clicks}}</h1>
+      </div>
+      <div class="detail_information_box">
+        <table class="detail_information_table">
+          <thead>
+                <tr>
+                  <th scope="cols">번호</th>
+                  <th scope="cols">작성자</th>
+                  <th scope="cols">조회수</th>
+                  <th scope="cols">전화번호</th>
+                  <th scope="cols">날짜</th>
+                </tr>
+          </thead>
+          <tbody>
+                <tr>
+                  <th scope="row">{{information_post.pk}}</th>
+                  <th scope="row">{{information_post.author}}</th>
+                  <th scope="row">{{information_post.clicks}}</th>
+                  <th scope="row">{{information_post.phone_number}}</th>
+                  <th scope="row">{{information.create_at}}</th>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <th scope="row" colspan="4">{{information_post.title}}</th>
+                </tr>
+          </tbody>
+          </table>
+          <div class="file_box">
+            <h1> 첨부파일 </h1>
+              {%if information_post.file_1%}
+                <a href="{{information_post.file_1.url}}" download><h2>{{information_post.file_1.url | file_name_slice}}</h2></a><br>
+              {%else%}
+                <h2>파일 없음</h2>
+              {%endif%}
+              {%if information_post.file_2%}
+                <a href="{{information_post.file_2.url}}" download><h2>{{information_post.file_2.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_3%}
+                <a href="{{information_post.file_3.url}}" download><h2>{{information_post.file_3.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_4%}
+                <a href="{{information_post.file_4.url}}" download><h2>{{information_post.file_4.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+              {%if information_post.file_5%}
+                <a href="{{information_post.file_5.url}}" download><h2>{{information_post.file_5.url | file_name_slice}}</h2></a><br>
+              {%endif%}
+          </div>
+          <div class="post_text">
+            {{information_post.text|linebreaks}}
+          </div>
+          <hr>
+            <div class="button_box">
+              <button onClick="history.go(-2);">뒤로가기</button>
+            </div>
+            <div class="remove_button_box">
+              <button onClick="location.href='{%url 'web:input_information_post_password' page='information' post_pk=information_post.pk name='delete'%}'">삭제하기</button>
+            </div>
+       </div>
+{%endblock%}

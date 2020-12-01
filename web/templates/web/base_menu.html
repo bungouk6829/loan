@@ -1,0 +1,74 @@
+{%extends 'web/base.html'%}
+{%load static%}
+{%block content%}
+
+{%if page == 'company' or page == 'history' or page == 'organization' or page == 'management' or page == 'map'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_1.js'%}"></script>
+
+{%elif page == 'business' or page == 'major'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_2.js'%}"></script>
+
+{%elif page == 'result'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_3.js'%}"></script>
+
+{%elif page == 'equipment'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_4.js'%}"></script>
+
+{%elif page == 'license'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_5.js'%}"></script>
+
+{%elif page == 'notice'%}
+<script type="text/javascript" src="{%static 'web/javascript/notice.js'%}"></script>
+
+{%elif page == 'information'%}
+<script type="text/javascript" src="{%static 'web/javascript/information.js'%}"></script>
+
+{%endif%}
+<!--측면 메뉴-->
+<section id="block_wrap_section">
+  <section id="menu_wrap_section">
+    <div id="menu_name">
+      <h1 class="korean">
+        {%block korean%}
+        {%endblock%}
+      </h1>
+      <h1 class="english">
+        {%block english%}
+        {%endblock%}
+      </h1>
+    </div>
+    <div id="content_menu">
+      <img src="{%static 'web/img/menu_bar_1.png'%}">
+      <ul>
+        {%block menu%}
+        {%endblock%}
+      </ul>
+      <img src="{%static 'web/img/menu_bar_2.png'%}">
+    </div>
+    <div id="call_center_box">
+      <h1>고객센터</h1>
+      <br>
+      <a href="tel:031-408-4992">
+      <img src="{%static 'web/img/call_gif_logo.jpg'%}">
+      <h2>031-408-4992</h2>
+      <p>(클릭시 통화연결)</p>
+      </a>
+    </div>
+  </section>
+
+<!--컨테이너-->
+
+  <section id="container_section">
+    <div class="container_name">
+      <br><br>
+      <h1>
+        {%block page%}
+        {%endblock%}
+      </h1>
+    </div>
+    <br><br><br>
+    {%block container%}
+    {%endblock%}
+  </section>
+</section>
+{%endblock%}

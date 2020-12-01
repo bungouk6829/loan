@@ -1,0 +1,58 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+{%load custom_tag%}
+
+{%block korean%}
+        사업실적
+{%endblock%}
+
+{%block english%}
+        Business Gallery
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='result'%}"><li>사업실적</li></a>
+{%endblock%}
+
+<!--컨테이너-->
+{%block page%}
+        | 사업 실적
+{%endblock%}
+
+{%block container%}
+    <div class="result_box">
+      <table class="result_table">
+        <thead>
+              <tr>
+                <th scope="cols">공사현장</th>
+                <th scope="cols">공사내용</th>
+                <th scope="cols">공사시작날짜</th>
+              </tr>
+        </thead>
+        <tbody>
+          {%for result_post in result_posts%}
+              <tr>
+                <td class="posts_table_title">
+                  <a href="{%url 'web:detail_post' page='result' post_pk=result_post.pk%}">
+                  {{result_post.address | result_post_slice}}
+                  </a>
+                </td>
+                <th scope="row"><a href="{%url 'web:detail_post' page='result' post_pk=result_post.pk%}">{{result_post.business_name | result_post_slice}}</a></th>
+                <th scope="row">{{result_post.business_start_at}}</th>
+              </tr>
+           {%endfor%}
+        </tbody>
+        </table>
+        <table class="page_box">
+            <tr>
+              {%if result_posts.has_previous%}
+              <td class="pre_button"><a href="?p={{result_posts.previous_page_number}}">◀</a></td>
+              {%endif%}
+              <td>{{ result_posts.number }} / {{ result_posts.paginator.num_pages }}</td>
+              {% if result_posts.has_next %}
+              <td class="next_button"><a href="?p={{result_posts.next_page_number}}">▶</a></td>
+              {%endif%}
+            </tr>
+        </table>
+     </div>
+{%endblock%}

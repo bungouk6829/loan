@@ -1,0 +1,380 @@
+@charset "UTF-8";
+
+#wrap_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_img_box{
+  order:1;
+  width: 100%;
+  height: 800px;
+}
+
+.main_img{
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../img/main.jpg');
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.main_introduce_box{
+  padding: 30px 0px;
+  text-align: center;
+  width:700px;
+  height: 350px;
+  background-color: #630091;
+  background-color: rgba( 0, 0, 0, 0.7 );
+}
+
+.main_introduce_box form h1{
+  font-size:30px;
+  color:#ed9a00;
+  width:100%;
+}
+
+.main_introduce_box form table{
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top:50px;
+  width:70%;
+  height:130px;
+}
+
+.main_introduce_box form table tr td{
+  color:black;
+  font-size:18px;
+  background:#dedede;
+  border:1px solid gray;
+
+  vertical-align:middle;
+  font-weight:bold;
+}
+
+.main_introduce_box form table tr td input, .main_introduce_box form table tr td select{
+  width:100%;
+  height:100%;
+  border:0px;
+  background: #dedede;
+  color:black;
+}
+
+.main_introduce_box form button{
+  width:150px;
+  height:50px;
+  background: #4d91ff;
+  font-size:15px;
+  color:white;
+  border:0px;
+}
+
+
+
+#first_section{
+  text-align: center;
+  padding-top: 100px;
+  order:2;
+  background: white;
+  padding-bottom: 50px;
+}
+
+.round_box{
+  float: left;
+  width: 250px;
+  height: 320px;
+  margin-left: 20px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 15px;
+  color:#777777;
+  font-weight: 300;
+}
+
+.round_box img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+.round_box h1{
+  font-size: 18px;
+  color:#777777;
+  font-weight: 500;
+}
+
+.round_box:first-child{
+  margin-left: 0px;
+}
+
+.first_hr{
+  order:3;
+  width: 1000px;
+  border:1px solid #d6d6d6;
+}
+
+#second_section{
+  order:4;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.gallery_box{
+  width: 1000px;
+  height: 450px;
+  text-align: center;
+}
+
+
+.mySlides img{
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  float: left;
+  border-radius: 5px;
+}
+
+.mySlides h1{
+  padding-top: 100px;
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mySlides p{
+  color:black;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.second_hr{
+  order:2;
+  width: 1000px;
+  border:1px solid #d6d6d6;
+}
+
+.info_box{
+  padding-top: 50px;
+  order:3;
+  width: 1000px;
+  height: 500px;
+}
+
+.map_img{
+  float: right;
+}
+
+.map_img img{
+  width: 500px;
+  height: 450px;
+  border-radius: 5px;
+}
+
+.map{
+  padding-top: 100px;
+}
+
+.map img, .tel img, .fax img, .email img{
+  width: 40px;
+  height: 40px;
+}
+
+.map h1{
+  font-size: 30px;
+  color:black;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.tel h1, .fax h1, .email h1{
+  font-size: 20px;
+  color:#122B88;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.map p{
+  line-height: 30px;
+  font-size: 20px;
+  color:gray;
+  font-weight: 100;
+}
+
+.map img, .map h1, .tel img, .tel h1, .fax img, .fax h1, .email img, .email h1{
+  display: inline;
+}
+
+.tel p, .email p{
+  display: inline;
+  font-size: 15px;
+  color:black;
+}
+
+
+@media all and (max-width:1280px) {
+
+  #wrap_section{
+    width: 100%;
+    height: auto;
+  }
+
+  .main_img_box{
+    width: 100%;
+    height: 600px;
+  }
+
+  .main_img{
+    width:100%;
+    height: 600px;
+    background-image: url('../img/main.jpg');
+    background-size: cover;
+    background-attachment:scroll;
+  }
+
+  .main_introduce_box{
+    width: 70%;
+    height: auto;
+  }
+
+  .main_introduce_box h1{
+    font-size:20px;
+  }
+
+  .main_introduce_box h2, .main_introduce_box h3{
+    font-size: 20px;
+  }
+
+  .main_introduce_box p{
+    font-size: 15px;
+  }
+
+  #first_section{
+    order:2;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .round_box{
+    width: 400px;
+    height:150px;
+    margin-top:20px;
+    display: inline-block;
+  }
+
+  .round_box img{
+    width: 120px;
+    height:120px;
+    float:left;
+  }
+
+  .round_box h1{
+    margin-top: -30px;
+    padding-left: 10px;
+    float:left;
+    font-size: 13px;
+  }
+
+  .round_box:first-child{
+    margin-left: 20px;
+  }
+
+  .round_box p{
+    margin-top: -30px;
+    text-align:left;
+    padding-left: 10px;
+    float:left;
+    font-size: 13px;
+  }
+
+  #second_section{
+    order:3;
+    width:100%;
+    height: auto;
+  }
+
+  .first_hr, .second_hr{
+    align:center;
+    width: 90%;
+  }
+
+  .gallery_box{
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .mySlides img{
+    width:90%;
+    height: auto;
+    float:none;
+  }
+
+  .mySlides h1{
+    font-size: 15px;
+    float:none;
+  }
+
+  .mySlides p{
+    float:none;
+    font-size: 13px;
+  }
+
+  .mySlides{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+    padding-bottom: 30px;
+  }
+
+  .info_box{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .map_img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .map_img img{
+    width: 80%;
+    height: auto;
+
+  }
+
+  .map, .tel, .fax, .email{
+    width: 100%;
+    height: auto;
+  }
+
+  .map img, .tel img, .fax img, .email img{
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+  }
+
+  .map h1, .map p, .tel h1, .tel p, .fax h1, .fax p, .email h1{
+    font-size: 15px;
+  }
+
+
+}

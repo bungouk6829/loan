@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+.equipment_box{
+  padding-top:30px;
+  width: 100%;
+  height: 650px;
+}
+
+.equipment_img_box{
+  width: 50%;
+  height: 200px;
+  float: left;
+  text-align: center;
+}
+
+.equipment_img_box img{
+  width:250px;
+  height:150px;
+}
+
+.equipment_img_box h1{
+  font-size:18px;
+  font-weight: 500;
+  color: #122B88;
+}
+
+.equipment_img_box h2{
+  font-size:13px;
+  font-weight: 300;
+  color:gray;
+}
+
+.equipment_gallery_box{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  height: 350px;
+  background: #e6e6e6;
+}
+
+.equipment_gallery_box img{
+  border-radius: 5px;
+  width:230px;
+  height:180px;
+  margin-left: 20px;
+}
+
+.equipment_gallery_box img:first-child{
+  margin-left: 0px;
+}
+
+@media all and (max-width:1280px) {
+
+  .equipment_box{
+    width: 100%;
+    height:auto;
+  }
+
+  .equipment_img_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment_img_box img{
+    width: 70%;
+    height: auto;
+  }
+
+  .equipment_img_box h1{
+    font-size:15px;
+  }
+
+  .equipment_img_box h2{
+    font-size:13px;
+  }
+
+  .equipment_gallery_box{
+    width: 100%;
+    height: auto;
+  }
+
+  .equipment_gallery_box img{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    height: auto;
+  }
+
+}

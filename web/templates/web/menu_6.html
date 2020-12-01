@@ -1,0 +1,120 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+{%load  custom_tag%}
+
+{%block korean%}
+        {%if page == 'notice'%}
+        공지사항
+        {%elif page == 'information'%}
+        문의하기
+        {%endif%}
+{%endblock%}
+
+{%block english%}
+        {%if page == 'notice'%}
+        Notice
+        {%elif page == 'information'%}
+        Information
+        {%endif%}
+{%endblock%}
+
+{%block menu%}
+        <a href="{%url 'web:menu' page='notice'%}"><li>공지사항</li></a>
+        <a href="{%url 'web:menu' page='information'%}"><li>문의하기</li></a>
+{%endblock%}
+
+<!--컨테이너-->
+{%block page%}
+        {%if page == 'notice'%}
+        | 공지사항
+        {%elif page == 'information'%}
+        | 문의하기
+        {%endif%}
+{%endblock%}
+
+{%block container%}
+    {%if page == 'notice'%}
+    <div class="notice_box">
+      <table class="notice_table">
+        <thead>
+              <tr>
+                <th scope="cols">번호</th>
+                <th scope="cols">작성자</th>
+                <th scope="cols">제목</th>
+                <th scope="cols">작성일</th>
+                <th scope="cols">조회</th>
+              </tr>
+        </thead>
+        <tbody>
+          {%for notice_post in notice_posts%}
+              <tr>
+                <th scope="row">{{notice_post.pk}}</th>
+                <th scope="row">운영자</th>
+                <td class="posts_table_title">
+                  <a href="{%url 'web:detail_post' 'notice' notice_post.pk%}">
+                  {{notice_post.title|title_slice}}
+                  </a>
+                </td>
+                <td class="posts_table_td">{{notice_post.create_at}}</td>
+                <td class="posts_table_td">{{notice_post.clicks}}</td>
+              </tr>
+           {%endfor%}
+        </tbody>
+        </table>
+        <table class="page_box">
+            <tr>
+              {%if notice_posts.has_previous%}
+              <td class="pre_button"><a href="?p={{notice_posts.previous_page_number}}">◀</a></td>
+              {%endif%}
+              <td>{{ notice_posts.number }} / {{ notice_posts.paginator.num_pages }}</td>
+              {% if notice_posts.has_next %}
+              <td class="next_button"><a href="?p={{notice_posts.next_page_number}}">▶</a></td>
+              {%endif%}
+            </tr>
+        </table>
+     </div>
+     {%elif page == 'information'%}
+     <div class="information_box">
+       <table class="information_table">
+         <thead>
+               <tr>
+                 <th scope="cols">번호</th>
+                 <th scope="cols">작성자</th>
+                 <th scope="cols">제목</th>
+                 <th scope="cols">작성일</th>
+                 <th scope="cols">조회</th>
+               </tr>
+         </thead>
+         <tbody>
+           {%for information_post in information_posts%}
+               <tr>
+                 <th scope="row">{{information_post.pk}}</th>
+                 <th scope="row">{{information_post.author}}</th>
+                 <td class="posts_table_title">
+                   <a href="{%url 'web:input_information_post_password' page='information' post_pk=information_post.pk name='enter'%}">
+                   {{information_post.title|title_slice}}
+                   </a>
+                 </td>
+                 <td class="posts_table_td">{{information.create_at}}</td>
+                 <td class="posts_table_td">{{information.clicks}}</td>
+               </tr>
+            {%endfor%}
+         </tbody>
+         </table>
+         <table class="page_box">
+             <tr>
+               {%if information_posts.has_previous%}
+               <td class="pre_button"><a href="?p={{information_posts.previous_page_number}}">◀</a></td>
+               {%endif%}
+               <td>{{ information_posts.number }} / {{ information_posts.paginator.num_pages }}</td>
+               {% if information_posts.has_next %}
+               <td class="next_button"><a href="?p={{information_posts.next_page_number}}">▶</a></td>
+               {%endif%}
+             </tr>
+         </table>
+      </div>
+      <div class="button_box">
+        <button onClick="location.href='{%url 'web:new_information_post' 'information'%}'">글쓰기</button>
+      </div>
+     {%endif%}
+{%endblock%}

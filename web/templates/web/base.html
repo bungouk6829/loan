@@ -1,0 +1,148 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- 반응형웹 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- css -->
+	<link rel="stylesheet" href="{%static 'web/css/reset.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/base.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/base_menu.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/main.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_1.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_2.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_3.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_4.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_5.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/menu_6.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/detail_notice.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/detail_information.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/detail_result.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/new_information_post.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/input_information_post_password.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/check_password_information_post.css'%}">
+	<link rel="stylesheet" href="{%static 'web/css/magnific-popup.css'%}">
+	<!-- 구글폰트 -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<title>(주)보라파이낸셜대부 - 신용대출, 담보대출 전문</title>
+	<!--제이쿼리 자바스크립트-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- 등록증 이미지 갤러리 자바스크립트-->
+	<script src="{%static 'web/javascript/jquery.magnific-popup.min.js'%}"></script>
+</head>
+<body>
+
+	<script type="text/javascript" src="{%static 'web/javascript/base.js'%}"></script>
+	<section id="header_section">
+		<div class="main_icon_box">
+			<a href="{%url 'web:main'%}">
+				<img src="{%static 'web/img/logo.png'%}">
+			</a>
+		</div>
+		<div class="main_menu_box">
+			<ul class="main_menu">
+				<li class="menu_hover_1"><a href="{%url 'web:menu' page="company"%}">회사소개</a>
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="company"%}">• 인사말</a></li>
+						<li><a href="{%url 'web:menu' page="map"%}">• 찾아오시는길</a></li>
+					</ul>
+				</li>
+				<li class="menu_hover_2"><a href="{%url 'web:menu' page="worker"%}">신용대출</a>
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="worker"%}">• 직장인대출</a></li>
+						<li><a href="{%url 'web:menu' page="owner"%}">• 사업자대출</a></li>
+						<li><a href="{%url 'web:menu' page="women"%}">• 주부/여성대출</a></li>
+						<li><a href="{%url 'web:menu' page="jobless"%}">• 무직자대출</a></li>
+						<li><a href="{%url 'web:menu' page="cosmetic"%}">• 성형자금대출</a></li>
+					</ul>
+				</li>
+				<li class="menu_hover_3"><a href="{%url 'web:menu' page="estate"%}">담보대출</a>
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="estate"%}">• 부동산담보대출</a></li>
+						<li><a href="{%url 'web:menu' page="gold"%}">• 금/은담보대출</a></li>
+						<li><a href="{%url 'web:menu' page="leisure"%}">• 레저스포츠담보대출</a></li>
+						<li><a href="{%url 'web:menu' page="car"%}">• 자동차담보대출</a></li>
+						<li><a href="{%url 'web:menu' page="motor"%}">• 이륜차담보대출</a></li>
+					</ul>
+				</li>
+				<li class="menu_hover_4"><a href="{%url 'web:menu' page="notice"%}">고객센터</a>
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="notice"%}">• 공지사항</a></li>
+						<li><a href="{%url 'web:menu' page="information"%}">• 문의하기</a></li>
+					</ul>
+				</li>
+				<li><a href="{%url 'web:menu' page="investor"%}">투자자모집</a></li>
+			</ul>
+		</div>
+		<div class="mobile_toggle_menu_btn">
+			<img src="{%static 'web/img/toggle_menu_btn.png'%}">
+			<ul class="mobile_menu">
+				<li class="mobile_hover_1">회사소개
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="company"%}">• 인사말</a></li>
+						<li><a href="{%url 'web:menu' page="map"%}">• 찾아오시는길</a></li>
+					</ul>
+				</li>
+				<li class="mobile_hover_2">신용대출
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="worker"%}">• 직장인대출</a></li>
+						<li><a href="{%url 'web:menu' page="owner"%}">• 사업자대출</a></li>
+						<li><a href="{%url 'web:menu' page="women"%}">• 주부/여성대출</a></li>
+						<li><a href="{%url 'web:menu' page="jobless"%}">• 무직자대출</a></li>
+						<li><a href="{%url 'web:menu' page="cosmetic"%}">• 성형자금대출</a></li>
+					</ul>
+				</li>
+				<li class="mobile_hover_3">담보대출
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="estate"%}">• 부동산대출</a></li>
+						<li><a href="{%url 'web:menu' page="gold"%}">• 금/은대출</a></li>
+						<li><a href="{%url 'web:menu' page="leisure"%}">• 레저스포츠대출</a></li>
+						<li><a href="{%url 'web:menu' page="car"%}">• 자동차대출</a></li>
+						<li><a href="{%url 'web:menu' page="motor"%}">• 이륜자동차대출</a></li>
+					</ul>
+				</li>
+				<li class="mobile_hover_4">고객센터
+					<ul class="sub_menu">
+						<li><a href="{%url 'web:menu' page="notice"%}">• 공지사항</a></li>
+						<li><a href="{%url 'web:menu' page="information"%}">• 문의하기</a></li>
+					</ul>
+				</li>
+				<li><a href="{%url 'web:menu' page="investor"%}">투자자모집</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="content_section">
+		{%block content%}
+		{%endblock%}
+	</section>
+
+	<section id="footer_section">
+		<br>
+		<div class="sub_icon_box">
+			<img src="{%static 'web/img/logo.png'%}">
+		</div>
+		<div class="contact_box">
+			<br>
+			<h1>(주)보라파이낸셜 | 대표이사 : 송형기 | 사업자등록번호 : 895-86-01279<h1><br>
+			<p>경기도 수원시 장안구 경수대로 789 라이온스빌딩 2층</p><br>
+			<p>대표번호 : 1800-9523</p><br>
+			<p>사업자등록번호 : 311-91-04995</p><br>
+			<p>대부업등록번호 : 2020-수원-2076</p><br>
+			<p>이메일 : showtjddnjs@naver.com</p><br>
+			<p>대출금리 연 24% 이내 | 연체이자율 연 24% 이내 | 취급/중도상환/중개수수료 및 기타 부대비용 없음</p><br>
+		</div>
+		<div class="sub_contact_box">
+			<p>과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.</p><br>
+			<p>* 중개수수료를 요구하거나 받는 것은 불법이며, 대출 시 귀하의 신용등급이 하락할 수 있습니다.</p>
+			<p>* 이 대출에 기재되어 있는 광고 내용은 게시자가 제공하는 정보로, 이를 신뢰하여 취한 조치에 대하여 어떠한 책임도 지지 않습니다.</p>
+			<br>
+		</div>
+	</section>
+
+</body>
+</html>

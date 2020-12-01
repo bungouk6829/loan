@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.license_img_box{
+  width:100%;
+  height:100%;
+  padding: 30px;
+}
+
+#container_section > div.content_box > div > a > img{
+  display:inline;
+  width:150px;
+  height:200px;
+  border: 1px solid #d4d4d4;
+  margin-left:40px;
+  margin-top: 30px;
+}
+
+#container_section > div.content_box > div.license_img_box > a:nth-child(1) > img{
+  margin-left:0px;
+}
+
+@media all and (max-width:1280px) {
+
+  .license_img_box{
+    width:100%;
+    height: auto;
+    padding: 0px;
+  }
+
+  #container_section > div.content_box > div > a{
+    width:45%;
+    height:auto;
+    margin:4.5%;
+  }
+
+  #container_section > div.content_box > div > a > img{
+    margin:0px;
+    padding:0px;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+
+}

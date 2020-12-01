@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.display_none{
+  display: none;
+}
+
+.detail_information_box{
+  background: white;
+  width: 100%;
+  min-height: 500px;
+}
+
+.detail_information_table {
+  margin: auto;
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 15px;
+  width: 100%;
+}
+
+.detail_information_table thead th {
+  font-size: 18px;
+  padding: 10px;
+  font-weight: 500;
+  vertical-align: top;
+  color: #369;
+  border-bottom: 3px solid #036;
+  text-align: center;
+}
+
+.detail_information_table thead th:nth-child(1){
+  width:70px;
+}
+
+.detail_information_table thead th:nth-child(2){
+  width:100px;
+}
+
+.detail_information_table thead th:nth-child(3){
+  width:70px;
+}
+
+.detail_information_table thead th:nth-child(4){
+  width:100px;
+}
+
+.detail_information_table thead th:nth-child(5){
+  width:100px;
+}
+
+.detail_information_table tbody th {
+  height: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  background: #f3f6f7;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+#container_section > div.detail_information_box > table > tbody > tr:nth-child(2) > th:nth-child(2){
+  border-right: 0px;
+}
+
+#container_section > div.detail_information_box > table > tbody > tr:nth-child(1) > th:nth-child(5){
+  border-right: 0px;
+}
+
+.file_box{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 95%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  text-align: center;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  background: #f3f6f7;
+}
+
+.file_box h1{
+  font-size: 13px;
+  font-weight: 300;
+  color:black;
+}
+
+.file_box a h2{
+  cursor:pointer;
+  font-size: 13px;
+  font-weight: 300;
+  color:black;
+}
+
+.file_box h2{
+  font-size: 13px;
+  font-weight: 300;
+  color:black;
+}
+
+.post_text{
+  font-size: 15px;
+  font-weight: 300;
+  padding:30px;
+  min-height:300px;
+}
+
+.detail_information_box hr{
+  border:2px solid #036;
+  font-weight: 100;
+}
+
+.button_box, .remove_button_box{
+  display:inline;
+}
+
+.button_box button, .remove_button_box button{
+  border-radius:5px;
+  background:white;
+  border:2px solid gray;
+  margin:30px;
+  font-size: 13px;
+}
+
+
+@media all and (max-width:1280px) {
+
+  .detail_information_box{
+    margin-top: 20px;
+    width:100%;
+    height:auto;
+  }
+
+  .detail_information_table thead tr th{
+    font-size: 13px;
+  }
+
+  .detail_information_table tbody tr th{
+    font-size: 13px;
+  }
+
+  div.detail_information_box > div.file_box > h1, div.detail_information_box > div.file_box > h2, div.detail_information_box > div.file_box > a > h2{
+    font-size: 11px;
+  }
+
+  #container_section > div.detail_information_box > div.post_text{
+    font-size: 13px;
+  }
+
+}
