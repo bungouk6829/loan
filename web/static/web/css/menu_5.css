@@ -3,3 +3,10 @@
 .background-3{
   background-image: url('../img/investor.jpg');
 }
+
+@media all and (max-width:1280px) {
+  .investor_box img{
+    width:100%;
+    height:auto;
+  }
+}
