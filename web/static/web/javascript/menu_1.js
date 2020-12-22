@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(selector).css('opacity', '0.7');
   }
 
-  href = window.location.href.replace("http://www.보라파이낸셜대부.com/","");
+  href = window.location.href.replace("http://xn--620b86bm2f81gduat3p7lmnlx.com/","");
 
   if (href == "company"){
     selector = '#content_menu > ul > a:nth-child(1) > li'
