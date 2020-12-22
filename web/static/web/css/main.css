@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+input{
+/*ios대응*/
+appearance: none;
+-webkit-appearance: none;
+-webkit-border-radius: 0;
+}
+
+select{
+/*ios대응*/
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+}
+select::-ms-expand{
+display:none; /* 화살표 없애기 for IE10, 11*/
+}
+
 #wrap_section{
   display: flex;
   flex-direction: column;
@@ -269,23 +287,28 @@
 
   #wrap_section > div > div > div > form > .mobile_main_new_information_table > tbody > tr > td{
     vertical-align: middle;
-    overflow: hidden;
     font-size:15px;
     font-weight:300;
     background:white;
     border:1px solid gray;
     height: 35px;
     color:black;
+    margin: 0px auto;
+  }
+
+  #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr> td:nth-child(1){
+    width:75px;
   }
 
   #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td:nth-child(2){
-    width: 53%;
+    width:110px;
   }
 
   #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td > input,
   #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td > select{
     color:black;
-    width: 100%;
+    background:white;
+    width:110px;
     height: 100%;
     border: 0px;
     padding:5px;
@@ -378,5 +401,8 @@
     font-size: 15px;
   }
 
+}
+
+@media all and (max-width:300px) {
 
 }

@@ -10,3 +10,7 @@
     height:auto;
   }
 }
+
+@media all and (max-width:300px) {
+
+}

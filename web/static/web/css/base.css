@@ -250,5 +250,8 @@ body{
     font-size:10px;
   }
 
+}
+
+@media all and (max-width:300px) {
 
 }

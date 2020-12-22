@@ -142,6 +142,8 @@
 
   .loan_img_text_box{
     width: 90%;
+    height: auto;
+    padding:15px;
   }
 
   .loan_img_text_box h1{
@@ -184,4 +186,8 @@
   #container_section > div.content_box > div > div.loan_product_box > table > tbody > tr > td{
     font-size: 15px;
   }
+}
+
+@media all and (max-width:300px) {
+
 }
