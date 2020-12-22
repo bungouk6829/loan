@@ -1,6 +1,8 @@
 {%extends 'web/base.html'%}
 {%load static%}
 {%block content%}
+
+<script type="text/javascript" src="{%static 'web/javascript/main.js'%}"></script>
 <section id="wrap_section">
   <div class="main_img_box">
     <div class="main_img">
@@ -8,7 +10,10 @@
         <form class="main_new_information_form" action="{%url 'web:new_information_post' page='information'%}" method="post">
           {%csrf_token%}
           <h1>빠른 대출 문의</h1>
-          <table>
+          <select name="region_1" id="sido1"></select>
+          <select name="region_2" id="gugun1"></select>
+          <br>
+          <table class="pc_main_new_information_table">
             <tr>
               <td>이름</td>
               <td><input type="text" name="name"></td>
@@ -21,22 +26,63 @@
               <td>상품</td>
               <td>
                 <select name="product">
-                  <option value="">직장인대출</option>
-                  <option value="secu">사업자대출</option>
-                  <option value="secu">주부/여성대출</option>
-                  <option value="secu">무직자대출</option>
-                  <option value="secu">성형자금대출</option>
-                  <option value="">부동산담보대출</option>
-                  <option value="secu">금/은담보대출</option>
-                  <option value="secu">레저스포츠담보대출</option>
-                  <option value="secu">자동차담보대출</option>
-                  <option value="secu">이륜차담보대출</option>
+                  <option value="직장인대출">직장인대출</option>
+                  <option value="사업자대출">사업자대출</option>
+                  <option value="주부/여성대출">주부/여성대출</option>
+                  <option value="무직자대출">무직자대출</option>
+                  <option value="성형자금대출">성형자금대출</option>
+                  <option value="부동산담보대출">부동산담보대출</option>
+                  <option value="금/은담보대출">금/은담보대출</option>
+                  <option value="레저스포츠담보대출">레저스포츠담보대출</option>
+                  <option value="자동차담보대출">자동차담보대출</option>
+                  <option value="이륜차담보대출">이륜차담보대출</option>
                 </select>
               </td>
             </tr>
             <tr>
-              <td colspan="2">전화번호</td>
-              <td colspan="2"><input type="tel" name="phone_number"></td>
+              <td>전화번호</td>
+              <td><input type="tel" name="phone_number"></td>
+              <td>희망금액(만원)</td>
+              <td><input type="number" name="money"></td>
+            </tr>
+          </table>
+          <table class="mobile_main_new_information_table">
+            <tr>
+              <td>이름</td>
+              <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+              <td>나이</td>
+              <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+              <td>직업</td>
+              <td><input type="text" name="job"></td>
+            </tr>
+            <tr>
+              <td>희망금액<br>(만원)</td>
+              <td><input type="number" name="money"></td>
+            </tr>
+            <tr>
+              <td>상품</td>
+              <td>
+                <select name="product">
+                  <option value="직장인대출">직장인대출</option>
+                  <option value="사업자대출">사업자대출</option>
+                  <option value="주부/여성대출">주부/여성대출</option>
+                  <option value="무직자대출">무직자대출</option>
+                  <option value="성형자금대출">성형자금대출</option>
+                  <option value="부동산담보대출">부동산담보대출</option>
+                  <option value="금/은담보대출">금/은담보대출</option>
+                  <option value="레저스포츠담보대출">레저스포츠담보대출</option>
+                  <option value="자동차담보대출">자동차담보대출</option>
+                  <option value="이륜차담보대출">이륜차담보대출</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>전화번호</td>
+              <td><input type="tel" name="phone_number"></td>
             </tr>
           </table>
           <br><br><br>
@@ -47,10 +93,10 @@
   </div>
   <section id="first_section">
     <div class="round_box">
-      <img src="{%static 'web/img/money.png'%}">
+      <img src="{%static 'web/img/money.jpg'%}">
       <br><br>
       <h1>신속하고, 최대한 많이!</h1><br>
-      <p>보라파이낸셜대부는<br>고객님의 여러가지 여건을 종합하여<br>합법적인 금리내에서<br>신속하고 대출금액을<br> 최대한 맞춰드립니다.</p>
+      <p>㈜보라파이낸셜대부에서는<br>고객님의 여러가지 여건을 종합하여<br>합법적인 금리내에서<br>신속하고 대출금액을<br> 최대한 맞춰드립니다.</p>
     </div>
     <div class="round_box">
       <img src="{%static 'web/img/credit.jpg'%}">
@@ -59,10 +105,10 @@
       <p>직장인, 사업자, 무직자, 여성등<br>다양한 직장을 가지신분들을 위하여<br>합법적인 금리내에서<br>최대한 대출금액을 맞춰드립니다.</p>
     </div>
     <div class="round_box">
-      <img src="{%static 'web/img/car.png'%}">
+      <img src="{%static 'web/img/car.jpg'%}">
       <br><br>
       <h1>담보 대출</h1><br>
-      <p>부동산, 금/은, 자동차등<br>보라파이낸셜대부에서는<br>모든것을 담보로 최고 20억까지<br>대출이 가능합니다.</p>
+      <p>부동산, 금/은, 자동차등<br>㈜보라파이낸셜대부에서는<br>모든것을 담보로 최고 20억까지<br>대출이 가능합니다.</p>
     </div>
   </section>
   <hr class="first_hr">
@@ -79,7 +125,7 @@
         <p>경기도 수원시 장안구 경수대로 789 라이온스빌딩 2층</p>
       </div>
       <div class="tel">
-        <a href="tel:031-408-4992">
+        <a href="tel:1800-9523">
         <img src="{%static 'web/img/tel_logo.png'%}">
         <h1>1800-9523</h1><br><p>(클릭시 통화연결)</p>
         </a>

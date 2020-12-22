@@ -1,0 +1,194 @@
+{%extends 'web/base_loan.html'%}
+{%load static%}
+
+{%block product_main_name%}
+  {%if page == 'worker'%}
+    직장인 대출
+  {%elif page == 'business'%}
+    사업자 대출
+  {%elif page == 'woman'%}
+    주부/여성 대출
+  {%elif page == 'jobless'%}
+    무직자 대출
+  {%elif page == 'cosmetic'%}
+    성형자금 대출
+  {%elif page == 'estate'%}
+    부동산 담보 대출
+  {%elif page == 'gold'%}
+    금/은 담보 대출
+  {%elif page == 'leisure'%}
+    레저스포츠 담보 대출
+  {%elif page == 'car'%}
+    자동차 담보 대출
+  {%elif page == 'motor'%}
+    이륜차 담보 대출
+  {%endif%}
+{%endblock%}
+
+{%block product_main_introduce%}
+  {%if page == 'worker'%}
+    재직확인으로 간편하게 신청 가능!
+  {%elif page == 'business'%}
+    사업을 하고 계신 분 혹은 예정이라면 신청 가능!
+  {%elif page == 'woman'%}
+    유흥업소 종사자 및 전업주부도 신청 가능!
+  {%elif page == 'jobless'%}
+    취업을 준비하고 계시거나, 무직자 신청 가능!
+  {%elif page == 'cosmetic'%}
+    성형수술을 원하시는 분이라면 신청 가능!
+  {%elif page == 'estate'%}
+    부동산을 소유하고 계신 분이라면 신청 가능!
+  {%elif page == 'gold'%}
+    금/은 및 보석을 소유하고 계신 분이라면 신청 가능!
+  {%elif page == 'leisure'%}
+    레저스포츠 장비를 소유하고 계신 분이라면 신청 가능!
+  {%elif page == 'car'%}
+    자동차를 소유하고 있거나 구입 예정이라면 신청 가능!
+  {%elif page == 'motor'%}
+    오토바이를 소유하고 계신 분이라면 신청 가능!
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_name%}
+  {%if page == 'worker'%}
+    직장인 대출 상품
+  {%elif page == 'business'%}
+    사업자 대출 상품
+  {%elif page == 'woman'%}
+    주부/여성 대출 상품
+  {%elif page == 'jobless'%}
+    무직자 대출 상품
+  {%elif page == 'cosmetic'%}
+    성형자금 대출 상품
+  {%elif page == 'estate'%}
+    부동산 담보 대출 상품
+  {%elif page == 'gold'%}
+    금/은 담보 대출 상품
+  {%elif page == 'leisure'%}
+    레저스포츠 담보 대출 상품
+  {%elif page == 'car'%}
+    자동차 담보 대출 상품
+  {%elif page == 'motor'%}
+    이륜차 담보 대출 상품
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_introduce%}
+  {%if page == 'worker'%}
+    만 19세 이상 재직확인이 분명한 고객이라면
+  {%elif page == 'business'%}
+    1개월 이상 소상공인 및 창업예정이라면
+  {%elif page == 'woman'%}
+    유흥업소 종사자 및 전업주부 등 여성을 위한 특별맞춤 상품 <br>(절대 비밀 보장)<br>
+  {%elif page == 'jobless'%}
+    취업준비 및 무직자(만 35세이하)라면
+  {%elif page == 'cosmetic'%}
+    성형수술을 하시려는 분이라면
+  {%elif page == 'estate'%}
+    시가 20억원 이하의 부동산을 소유하고 계신 분이라면
+  {%elif page == 'gold'%}
+    금/은 및 보석을 소유하고 계신 분이라면
+  {%elif page == 'leisure'%}
+    레저스포츠 장비를 소유하고 계신 분이라면<br>(캠핑카, 카라반, 제트스키, 요트 등)<br>
+  {%elif page == 'car'%}
+    자동차를 소유하고 있거나, 구입 예정이시라면<br>(자동차 구입은 ㈜보라파이낸셜대부에서 도와드립니다)<br>
+  {%elif page == 'motor'%}
+    오토바이를 소유하고 계신 분이라면
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_1%}
+  {%if page == 'worker'%}
+    만 19세 이상 재직확인이 분명한 고객
+  {%elif page == 'business'%}
+    1개월 이상 사업장을 운영중인 소상공인 및 창업예정자
+  {%elif page == 'woman'%}
+    모든 여성 (절대 비밀 보장)
+  {%elif page == 'jobless'%}
+    취업준비 및 무직자(만 35세이하) 고객
+  {%elif page == 'cosmetic'%}
+    성형수술을 하시려는 모든 고객
+  {%elif page == 'estate'%}
+    시가 20억원 이하의 부동산을 소유하고 계신 고객
+  {%elif page == 'gold'%}
+    금/은 및 보석을 소유하고 계신 고객
+  {%elif page == 'leisure'%}
+    레저스포츠 장비를 소유하고 계신 고객
+  {%elif page == 'car'%}
+    자동차를 소유하고 있거나 구입 예정이신 고객
+  {%elif page == 'motor'%}
+    오토바이를 소유하고 계신 고객
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_2%}
+  {%if page == 'worker'%}
+    100만원 ~ 최대 6,000만원
+  {%elif page == 'business'%}
+    100만원 ~ 최대 6,000만원
+  {%elif page == 'woman'%}
+    100만원 ~ 최대 6,000만원
+  {%elif page == 'jobless'%}
+    100만원 ~ 최대 6,000만원
+  {%elif page == 'cosmetic'%}
+    100만원 ~ 최대 6,000만원
+  {%elif page == 'estate'%}
+    100만원 ~ 최대 20억원
+  {%elif page == 'gold'%}
+    100만원 ~ 최대 20억원
+  {%elif page == 'leisure'%}
+    100만원 ~ 최대 5억원
+  {%elif page == 'car'%}
+    100만원 ~ 최대 5억원
+  {%elif page == 'motor'%}
+    100만원 ~ 최대 1억원
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_3%}
+  {%if page == 'worker'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'business'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'woman'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'jobless'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'cosmetic'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'estate'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'gold'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'leisure'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'car'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%elif page == 'motor'%}
+    연 24% 이내 (고객님의 조건에 따라서 법정 금리 내에서 금리가 달라질 수 있습니다.)
+  {%endif%}
+{%endblock%}
+
+{%block product_detail_4%}
+  {%if page == 'worker'%}
+    원리금균등분할상환
+  {%elif page == 'business'%}
+    원리금균등분할상환
+  {%elif page == 'woman'%}
+    원리금균등분할상환
+  {%elif page == 'jobless'%}
+    원리금균등분할상환
+  {%elif page == 'cosmetic'%}
+    원리금균등분할상환
+  {%elif page == 'estate'%}
+    원리금균등분할상환
+  {%elif page == 'gold'%}
+    원리금균등분할상환
+  {%elif page == 'leisure'%}
+    원리금균등분할상환
+  {%elif page == 'car'%}
+    원리금균등분할상환
+  {%elif page == 'motor'%}
+    원리금균등분할상환
+  {%endif%}
+{%endblock%}

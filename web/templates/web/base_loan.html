@@ -1,0 +1,157 @@
+{%extends 'web/base_menu.html'%}
+{%load static%}
+
+{%block korean%}
+        {%if page == 'worker'%}
+        직장인대출
+        {%elif page == 'business'%}
+        사업자대출
+        {%elif page == 'woman'%}
+        주부/여성대출
+        {%elif page == 'jobless'%}
+        무직자대출
+        {%elif page == 'cosmetic'%}
+        성형자금대출
+        {%elif page == 'estate'%}
+        부동산 담보 대출
+        {%elif page == 'gold'%}
+        금/은 담보 대출
+        {%elif page == 'leisure'%}
+        레저스포츠 담보 대출
+        {%elif page == 'car'%}
+        자동차 담보 대출
+        {%elif page == 'motor'%}
+        이륜차 담보 대출
+        {%endif%}
+{%endblock%}
+
+{%block english%}
+        {%if page == 'worker'%}
+        Office Worker Loan
+        {%elif page == 'business'%}
+        Business Loan
+        {%elif page == 'woman'%}
+        Women's Loan
+        {%elif page == 'jobless'%}
+        Unemployed Loan
+        {%elif page == 'cosmetic'%}
+        Surgical Loan
+        {%elif page == 'estate'%}
+        Mortgage Loan
+        {%elif page == 'gold'%}
+        Secure Gem Loan
+        {%elif page == 'leisure'%}
+        Secure Leisure Loan
+        {%elif page == 'car'%}
+        Secure Car Loan
+        {%elif page == 'motor'%}
+        Secure Motor Loan
+        {%endif%}
+{%endblock%}
+
+{%block menu%}
+  {%if page == 'worker' or page == 'business' or page == 'woman' or page == 'jobless' or page == 'cosmetic'%}
+        <a href="{%url 'web:menu' page='worker'%}"><li>직장인대출</li></a>
+        <a href="{%url 'web:menu' page='business'%}"><li>사업자대출</li></a>
+        <a href="{%url 'web:menu' page='woman'%}"><li>주부/여성대출</li></a>
+        <a href="{%url 'web:menu' page='jobless'%}"><li>무직자대출</li></a>
+        <a href="{%url 'web:menu' page='cosmetic'%}"><li>성형자금대출</li></a>
+  {%elif page == 'estate' or page == 'gold' or page == 'leisure' or page == 'car' or page == 'motor'%}
+        <a href="{%url 'web:menu' page='estate'%}"><li>부동산담보대출</li></a>
+        <a href="{%url 'web:menu' page='gold'%}"><li>금/은담보대출</li></a>
+        <a href="{%url 'web:menu' page='leisure'%}"><li>레저스포츠담보대출</li></a>
+        <a href="{%url 'web:menu' page='car'%}"><li>자동차담보대출</li></a>
+        <a href="{%url 'web:menu' page='motor'%}"><li>이륜차담보대출</li></a>
+  {%endif%}
+{%endblock%}
+
+<!--컨테이너-->
+{%block page%}
+        {%if page == 'worker'%}
+        | 직장인 대출 상품
+        {%elif page == 'business'%}
+        | 사업자 대출 상품
+        {%elif page == 'woman'%}
+        | 주부/여성 대출 상품
+        {%elif page == 'jobless'%}
+        | 무직자 대출 상품
+        {%elif page == 'cosmetic'%}
+        | 성형수술 자금 대출 상품
+        {%elif page == 'estate'%}
+        | 부동산 담보 대출
+        {%elif page == 'gold'%}
+        | 금/은 담보 대출
+        {%elif page == 'leisure'%}
+        | 레저스포츠 담보 대출
+        {%elif page == 'car'%}
+        | 자동차 담보 대출
+        {%elif page == 'motor'%}
+        | 이륜차 담보 대출
+        {%endif%}
+{%endblock%}
+
+{%block container%}
+<div class="content_box">
+  <div class="loan_introduce_box">
+    <div class="loan_img_box background-1">
+      <div class="loan_img_text_box">
+        <h1>{%block product_main_name%}{%endblock%}</h1>
+        <br><br>
+        <p>{%block product_main_introduce%}{%endblock%}</p>
+        <p>방문없이 <a href="{%url 'web:menu' page='information'%}">인터넷</a> 또는 <a href="tel:1800-9523">1800-9523</a> 으로 간편하게 신청하세요.</p>
+      </div>
+    </div>
+    <div class="loan_name_box">
+      <br><br><br>
+      <img src="{%static 'web/img/product_introduce_logo.png'%}">
+      <h1>대출소개</h1>
+      <hr>
+    </div>
+    <div class="loan_name_detail_box">
+      <h2>{%block product_detail_name%}{%endblock%}</h2>
+      <br><br>
+      <p>{%block product_detail_introduce%}{%endblock%}</p>
+      <p>당일 입금이 가능한 상품</p>
+    </div>
+    <br><br>
+    <div class="loan_name_box">
+      <br><br><br>
+      <img src="{%static 'web/img/product_introduce_logo.png'%}">
+      <h1>상품설명</h1>
+      <hr>
+    </div>
+    <div class="loan_product_box">
+      <p> “ 고객님의 상환능력에 따라 상품내용은 변동될 수 있습니다. ”</p>
+      <br><br>
+      <table>
+        <thead>
+          <th>구분</th>
+          <th>내용</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>대출대상</td>
+            <td>{%block product_detail_1%}{%endblock%}</td>
+          </tr>
+          <tr>
+            <td>대출한도</td>
+            <td>{%block product_detail_2%}{%endblock%}</td>
+          </tr>
+          <tr>
+            <td>대출금리</td>
+            <td>{%block product_detail_3%}{%endblock%}</td>
+          </tr>
+          <tr>
+            <td>상환방법</td>
+            <td>{%block product_detail_4%}{%endblock%}</td>
+          </tr>
+          <tr>
+            <td>수수료</td>
+            <td>없음</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+</div>
+{%endblock%}

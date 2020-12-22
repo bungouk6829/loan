@@ -11,8 +11,8 @@
 {%endblock%}
 
 {%block menu%}
-        <a href="{%url 'web:menu' page='notice'%}"><li>공지사항</li></a>
         <a href="{%url 'web:menu' page='information'%}"><li>문의하기</li></a>
+        <a href="{%url 'web:menu' page='qna'%}"><li>자주하는질문</li></a>
 {%endblock%}
 
 <!--컨테이너-->
@@ -26,34 +26,55 @@
           {%csrf_token%}
         <table class="new_information_table">
           <thead>
-                <tr>
-                  <th scope="cols">작성자</th>
-                  <th scope="cols">비밀번호</th>
-                  <th scope="cols">전화번호</th>
-                </tr>
+            <th scope="cols" colspan="4">대출 문의</th>
           </thead>
           <tbody>
                 <tr>
-                  <th scope="row"><input type="text" name="author" maxlength=10 placeholder='10자 이내로 입력'></th>
+                  <th scope="row">이름</th>
+                  <th scope="row"><input type="text" name="name" maxlength=10 placeholder='10자 이내로 입력'></th>
+                  <th scope="row">전화번호</th>
+                  <th scope="row"><input type="text" name="phone_number" maxlength=20 placeholder='숫자만 입력'></th>
+                </tr>
+                <tr>
+                  <th scope="row">비밀번호</th>
                   <th scope="row"><input type="password" name="password" maxlength=20 placeholder='20자 이내로 입력'></th>
-                  <th scope="row"><input type="text" name="phone_number" maxlength=20 placeholder='전화번호 입력'></th>
+                  <th scope="row">희망금액(만원)</th>
+                  <th scope="row"><input type="number" name="money" placeholder='숫자만 입력'></th>
+                </tr>
+                <tr>
+                  <th scope="row">나이</th>
+                  <th scope="row"><input type="number" name="age" placeholder='숫자만 입력'></th>
+                  <th scope="row">직업</th>
+                  <th scope="row"><input type="text" name="job" maxlength=10 placeholder='20자 이내로 입력'></th>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="2">
+                    <select name="region_1" id="sido1"></select>
+                    <select name="region_2" id="gugun1"></select>
+                  </th>
+                  <th scope="row" colspan="2">
+                    <select name="product">
+                      <option value="직장인대출">직장인대출</option>
+                      <option value="사업자대출">사업자대출</option>
+                      <option value="주부/여성대출">주부/여성대출</option>
+                      <option value="무직자대출">무직자대출</option>
+                      <option value="성형자금대출">성형자금대출</option>
+                      <option value="부동산담보대출">부동산담보대출</option>
+                      <option value="금/은담보대출">금/은담보대출</option>
+                      <option value="레저스포츠담보대출">레저스포츠담보대출</option>
+                      <option value="자동차담보대출">자동차담보대출</option>
+                      <option value="이륜차담보대출">이륜차담보대출</option>
+                    </select>
+                  </th>
                 </tr>
                 <tr>
                   <th scope="row">제목</th>
-                  <th scope="row" colspan="3"><input type="text" name="title" placeholder='제목 입력'></th>
+                  <th scope="row" colspan="5"><input type="text" name="title" placeholder='제목 입력'></th>
                 </tr>
           </tbody>
           </table>
-          <div class="file_box">
-            <h1> 첨부파일 </h1>
-            <input type="file" name="file_1">
-            <input type="file" name="file_2">
-            <input type="file" name="file_3">
-            <input type="file" name="file_4">
-            <input type="file" name="file_5">
-          </div>
           <div class="post_text">
-            <textarea style="resize:none;" name="text"></textarea>
+            <textarea style="resize:none;" name="text" placeholder="내용 입력"></textarea>
           </div>
           <hr>
             <div class="button_box">

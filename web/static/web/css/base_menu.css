@@ -123,6 +123,20 @@
   background: white;
   width: 100%;
   margin-top: 30px;
+  overflow:hidden;
+}
+
+#menu_wrap_section > div.base_menu_new_informaiton_box > form > table > tbody > tr > td{
+  display:inline;
+  background:white;
+  border:1px solid gray;
+  width: 150px;
+}
+
+#menu_wrap_section > div.base_menu_new_informaiton_box > form > table > tbody > tr > td > input{
+  width: 110px;
+  height: 30px;
+  border: 1px solid gray;
 }
 
 
@@ -156,7 +170,6 @@
   .content_box{
     margin: 0px;
     padding: 0px;
-    margin-top:70px;
     overflow: hidden;
     min-height:500px;
   }

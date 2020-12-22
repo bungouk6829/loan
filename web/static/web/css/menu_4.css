@@ -1,91 +1,176 @@
-@charset "utf-8";
+@charset "UTF-8";
 
-.equipment_box{
-  padding-top:30px;
+.information_box{
+  background: white;
   width: 100%;
-  height: 650px;
+  height: 500px;
 }
 
-.equipment_img_box{
-  width: 50%;
-  height: 200px;
-  float: left;
-  text-align: center;
+.information_table {
+  margin: auto;
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 15px;
+  width: 100%;
 }
 
-.equipment_img_box img{
-  width:250px;
-  height:150px;
-}
-
-.equipment_img_box h1{
-  font-size:18px;
+.information_table thead th{
+  font-size: 18px;
+  padding: 10px;
   font-weight: 500;
-  color: #122B88;
+  vertical-align: top;
+  color: #369;
+  border-bottom: 3px solid #036;
 }
 
-.equipment_img_box h2{
-  font-size:13px;
+.information_table thead th:nth-child(1){
+  width:50px;
+}
+
+.information_table thead th:nth-child(2){
+  width:80px;
+}
+
+.information_table thead th:nth-child(3){
+  width:500px;
+}
+
+
+.information_table tbody th{
+  height: 10px;
+  padding: 10px;
+  font-size: 13px;
   font-weight: 300;
-  color:gray;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  background: #f3f6f7;
+  border-right: 1px solid #ccc;
 }
 
-.equipment_gallery_box{
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 350px;
-  background: #e6e6e6;
+.posts_table_title{
+  padding: 10px;
+  vertical-align: top;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
-.equipment_gallery_box img{
-  border-radius: 5px;
-  width:230px;
-  height:180px;
-  margin-left: 20px;
+.posts_table_title a{
+  color:black;
+  font-size: 13px;
+  font-weight: 100;
 }
 
-.equipment_gallery_box img:first-child{
-  margin-left: 0px;
+.posts_table_td{
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 100;
+  padding: 10px;
+  background: #f3f6f7;
 }
+
+.page_box{
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.page_box td{
+  width: 100px;
+}
+
+.page_box a{
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+
+.background-2{
+  background-image: url('../img/qna.jpg');
+}
+
+.question_box, .answer_box{
+  background:white;
+}
+
+.question_box > img, .answer_box > img{
+  display:inline;
+  width:45px;
+  height:45px;
+}
+
+#container_section > div.content_box > div > div.loan_name_detail_box > div.question_box > h1,
+#container_section > div.content_box > div > div.loan_name_detail_box > div.answer_box > h1{
+  display: inline;
+  font-size:18px;
+  line-height:35px;
+}
+
+#container_section > div.content_box > div > div.loan_name_detail_box > div.question_box > h1{
+  color:red;
+  font-weight:500;
+}
+
+#container_section > div.content_box > div > div.loan_name_detail_box > div.answer_box > h1{
+  font-weight:300;
+  color:black;
+}
+
 
 @media all and (max-width:1280px) {
 
-  .equipment_box{
-    width: 100%;
-    height:auto;
-  }
-
-  .equipment_img_box{
+  .information_box{
     width: 100%;
     height: auto;
+    margin:0px;
+    padding:0px;
+    margin-top: 20px;
+    padding-bottom:20px;
   }
 
-  .equipment_img_box img{
-    width: 70%;
-    height: auto;
+  .information_table thead tr th{
+    font-size:10px;
   }
 
-  .equipment_img_box h1{
-    font-size:15px;
+  .information_table tbody tr th, .information_table tbody tr td{
+    font-size: 10px;
   }
 
-  .equipment_img_box h2{
-    font-size:13px;
+  .posts_table_title a{
+    font-size: 13px;
   }
 
-  .equipment_gallery_box{
-    width: 100%;
-    height: auto;
+  .information_table thead th:nth-child(1){
+    width:90px;
   }
 
-  .equipment_gallery_box img{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 25%;
-    height: auto;
+  .information_table thead th:nth-child(2){
+    width:100px;
+  }
+
+  .information_table thead th:nth-child(4){
+    width:150px;
+  }
+
+  .information_table thead th:last-child{
+    display:none;
+  }
+
+  .information_table tbody tr td:last-child{
+    display:none;
+  }
+
+  .page_box tr td a, .page_box tr td{
+    font-size: 13px;
+  }
+
+  .page_box tr td{
+    width: 100px;
+    margin:0px;
+    padding:0px;
   }
 
 }

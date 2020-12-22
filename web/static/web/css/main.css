@@ -42,32 +42,43 @@
   width:100%;
 }
 
-.main_introduce_box form table{
+.main_introduce_box > form > .pc_main_new_information_table{
   border: 1px solid white;
-  border-radius: 15px;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top:50px;
-  width:70%;
+  margin-left: 50px;
+  margin-right: 50px;
+  width:600px;
   height:130px;
 }
 
-.main_introduce_box form table tr td{
+.main_introduce_box > form > .pc_main_new_information_table > tbody > tr > td{
   color:black;
   font-size:18px;
-  background:#dedede;
+  background:white;
   border:1px solid gray;
-
   vertical-align:middle;
   font-weight:bold;
+  overflow:hidden;
 }
 
-.main_introduce_box form table tr td input, .main_introduce_box form table tr td select{
+.main_introduce_box > form > select{
+  margin-top: 50px;
+  background:white;
+  width:301px;
+  border-top:1px solid gray;
+  height:41px;
+  margin-left:-2.5px;
+  margin-right:-2.5px;
+}
+
+
+.main_introduce_box > form > .pc_main_new_information_table > tbody > tr > td > input,
+ .main_introduce_box form > .pc_main_new_information_table > tbody > tr > td > select{
   width:100%;
   height:100%;
   border:0px;
-  background: #dedede;
+  background:white;
   color:black;
+  padding:5px;
 }
 
 .main_introduce_box form button{
@@ -131,40 +142,6 @@
   padding-top: 50px;
 }
 
-.gallery_box{
-  width: 1000px;
-  height: 450px;
-  text-align: center;
-}
-
-
-.mySlides img{
-  width: 500px;
-  height: 400px;
-  overflow: hidden;
-  float: left;
-  border-radius: 5px;
-}
-
-.mySlides h1{
-  padding-top: 100px;
-  color: black;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.mySlides p{
-  color:black;
-  font-size: 15px;
-  font-weight: 100;
-}
-
-.second_hr{
-  order:2;
-  width: 1000px;
-  border:1px solid #d6d6d6;
-}
-
 .info_box{
   padding-top: 50px;
   order:3;
@@ -177,7 +154,7 @@
 }
 
 .map_img img{
-  width: 500px;
+  width: 450px;
   height: 450px;
   border-radius: 5px;
 }
@@ -222,6 +199,9 @@
   color:black;
 }
 
+.mobile_main_new_information_table{
+  display: none;
+}
 
 @media all and (max-width:1280px) {
 
@@ -232,10 +212,11 @@
 
   .main_img_box{
     width: 100%;
-    height: 600px;
+    height: auto;
   }
 
   .main_img{
+    margin-top:72px;
     width:100%;
     height: 600px;
     background-image: url('../img/main.jpg');
@@ -243,9 +224,10 @@
     background-attachment:scroll;
   }
 
+
   .main_introduce_box{
     width: 70%;
-    height: auto;
+    height: 80%;
   }
 
   .main_introduce_box h1{
@@ -258,6 +240,55 @@
 
   .main_introduce_box p{
     font-size: 15px;
+  }
+
+  .main_introduce_box > .main_new_information_form > h1{
+    font-size: 25px;
+  }
+
+  .main_introduce_box > .main_new_information_form > select{
+    width:100px;
+    height: 35px;
+    margin-left:-2.5px;
+    margin-right:-2.5px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 0px;
+  }
+
+  .main_introduce_box > .main_new_information_form > .pc_main_new_information_table{
+    display: none;
+  }
+
+  .mobile_main_new_information_table{
+    width: 100%;
+    display: inline;
+    margin: 0 auto;
+  }
+
+  #wrap_section > div > div > div > form > .mobile_main_new_information_table > tbody > tr > td{
+    vertical-align: middle;
+    overflow: hidden;
+    font-size:15px;
+    font-weight:300;
+    background:white;
+    border:1px solid gray;
+    height: 35px;
+    color:black;
+  }
+
+  #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td:nth-child(2){
+    width: 53%;
+  }
+
+  #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td > input,
+  #wrap_section > div > div > div > form > table.mobile_main_new_information_table > tbody > tr > td > select{
+    color:black;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding:5px;
   }
 
   #first_section{
@@ -308,38 +339,9 @@
     height: auto;
   }
 
-  .first_hr, .second_hr{
+  .first_hr{
     align:center;
     width: 90%;
-  }
-
-  .gallery_box{
-    width: 100%;
-    height: auto;
-    text-align: center;
-  }
-
-  .mySlides img{
-    width:90%;
-    height: auto;
-    float:none;
-  }
-
-  .mySlides h1{
-    font-size: 15px;
-    float:none;
-  }
-
-  .mySlides p{
-    float:none;
-    font-size: 13px;
-  }
-
-  .mySlides{
-    margin:0px;
-    padding:0px;
-    text-align:center;
-    padding-bottom: 30px;
   }
 
   .info_box{

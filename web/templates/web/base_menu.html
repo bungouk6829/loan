@@ -2,28 +2,24 @@
 {%load static%}
 {%block content%}
 
-{%if page == 'company' or page == 'history' or page == 'organization' or page == 'management' or page == 'map'%}
+<!--페이지별 자바 스크립트-->
+{%if page == 'company' or page == 'map'%}
 <script type="text/javascript" src="{%static 'web/javascript/menu_1.js'%}"></script>
 
-{%elif page == 'business' or page == 'major'%}
-<script type="text/javascript" src="{%static 'web/javascript/menu_2.js'%}"></script>
-
-{%elif page == 'result'%}
-<script type="text/javascript" src="{%static 'web/javascript/menu_3.js'%}"></script>
-
-{%elif page == 'equipment'%}
-<script type="text/javascript" src="{%static 'web/javascript/menu_4.js'%}"></script>
-
-{%elif page == 'license'%}
-<script type="text/javascript" src="{%static 'web/javascript/menu_5.js'%}"></script>
-
-{%elif page == 'notice'%}
-<script type="text/javascript" src="{%static 'web/javascript/notice.js'%}"></script>
+{%elif page == 'worker' or page == 'business' or page == 'woman' or page == 'jobless' or page == 'cosmetic' or page == 'estate' or page == 'gold' or page == 'leisure' or page == 'car' or page == 'motor'%}
+<script type="text/javascript" src="{%static 'web/javascript/loan_info.js'%}"></script>
 
 {%elif page == 'information'%}
 <script type="text/javascript" src="{%static 'web/javascript/information.js'%}"></script>
 
+{%elif page == 'qna'%}
+<script type="text/javascript" src="{%static 'web/javascript/qna.js'%}"></script>
+
+{%elif page == 'investor'%}
+<script type="text/javascript" src="{%static 'web/javascript/menu_5.js'%}"></script>
+
 {%endif%}
+
 <!--측면 메뉴-->
 <section id="block_wrap_section">
   <section id="menu_wrap_section">
@@ -46,11 +42,11 @@
       <img src="{%static 'web/img/menu_bar_2.png'%}">
     </div>
     <div id="call_center_box">
-      <h1>고객센터</h1>
+      <h1>빠른 대출 상담</h1>
       <br>
-      <a href="tel:031-408-4992">
+      <a href="tel:1800-9523">
       <img src="{%static 'web/img/call_gif_logo.jpg'%}">
-      <h2>031-408-4992</h2>
+      <h2>1800-9523</h2>
       <p>(클릭시 통화연결)</p>
       </a>
     </div>

@@ -3,13 +3,7 @@
 
 {%block korean%}
         {%if page == 'company'%}
-        회사소개
-        {%elif page == 'history'%}
-        회사연혁
-        {%elif page == 'organization'%}
-        조직도
-        {%elif page == 'management'%}
-        경영방침
+        인사말
         {%elif page == 'map'%}
         찾아오시는 길
         {%endif%}
@@ -18,12 +12,6 @@
 {%block english%}
         {%if page == 'company'%}
         Company
-        {%elif page == 'history'%}
-        History
-        {%elif page == 'organization'%}
-        Organization
-        {%elif page == 'management'%}
-        Management Policy
         {%elif page == 'map'%}
         Map
         {%endif%}
@@ -31,9 +19,6 @@
 
 {%block menu%}
         <a href="{%url 'web:menu' page='company'%}"><li>인사말</li></a>
-        <a href="{%url 'web:menu' page='history'%}"><li>회사연혁</li></a>
-        <a href="{%url 'web:menu' page='organization'%}"><li>조직도</li></a>
-        <a href="{%url 'web:menu' page='management'%}"><li>경영방침</li></a>
         <a href="{%url 'web:menu' page='map'%}"><li>찾아오시는길</li></a>
 {%endblock%}
 
@@ -41,12 +26,6 @@
 {%block page%}
         {%if page == 'company'%}
         | 인사말
-        {%elif page == 'history'%}
-        | 회사연혁
-        {%elif page == 'organization'%}
-        | 조직도
-        {%elif page == 'management'%}
-        | 경영방침
         {%elif page == 'map'%}
         | 찾아오시는 길
         {%endif%}
@@ -57,70 +36,39 @@
       {%if page == 'company'%}
       <div class="company_box">
         <br><br><br>
-        <h2>Utility System​</h2><br>
-        <h2>Quality</h2><br>
-        <h2>General architecture​</h2><br>
-        <h2>& scaffolding​</h2>
+        <h2>신용대출 대부업체 1위!​</h2><br>
+        <h2>담보대출 대부업체 1위!</h2><br>
+        <h2>고객만족도 대부업체 1위!</h2><br>
+        <h2>& 투자자수익률 대부업체 1위!​</h2>
         <br><br><br><br><br><br>
         <h1 class="title">안녕하십니까.​<h1><br>
-        <h3>㈜능성산업개발 대표이사 구한림 입니다.​</h3><br>
-        <h3>저희 회사는 주택철거, 공장철거, 상가철거, 비계구조물해체공사,<br> 분야 전문업체로서 2018년 창립 이래 차별화된 기술력 확보와 유능한<br> 인재를 통해 비계구조물해체공사  중장비대여 토공사 폐기물 처리<br> 등을 도맡아 다양한 서비스를 제공하며, 지속적으로 성장하고 있는<br> 기업입니다. 당사는 철거 기술능력은 어느 회사와 대립해도 기술적인<br> 능력이 매우 우수합니다. 또한 합리적인가격을 추구합니다​.</h3><br>
+        <h3>㈜보라파이낸셜대부 대표이사 송형기 입니다.​</h3><br>
+        <h3>㈜보라파이낸셜대부를 찾아주신 고객님들께 진심으로 감사드립니다.<br>
+            저희 ㈜보라파이낸셜대부는 서민금융의 활성화 및 개인, 기업의 경제적인<br>
+            어려움이나 재정적인 어려움이 처했을 때 안전하고<br>
+            정확한 도움을 드리고자 설립한 회사입니다.</h3><br>
         <br><br><br>
-        <h1 class="title">㈜능성산업개발은 늘 안전을​</h1><br>
-        <h1 class="title">최우선 합니다.​</h1><br>
-        <h3>저희는 철거에 필요한 모든 중장비를 자차 보유 하고있으며 기술인력부분에<br> 대해서는 최고의 베테랑들로 구성하고 있으며 저희 업체에서는<br> 항상 안전을 최우선시 하며 회사 설립 전 과 후 에 인사사고<br> 한번도 없었다는것을 자부합니다.​</h3><br>
-        <h3>저희는 항상 고객 만족에 최선을 다하며 공사의 가치를 만들어가는<br> 신뢰할수 있는 기업 (주)능성산업개발이 되겠습니다.​</h3><br>
-      </div>
-      {%elif page == "history"%}
-      <div class="history_box">
-        <div class="history_first_box">
-          <img src="{%static 'web/img/history_info.jpg'%}">
-        </div>
-        <div class="history_second_box">
-        <br><h2>상     호 |</h2><h1> ㈜능성산업개발​</h1>
-        <br><h2>대 표 이 사 |</h2><h1> 구 한 림​</h1>
-        <br><h2>사업자 등록번호 |</h2><h1> 895-86-01279​</h1>
-        <br><h2>주      소 |</h2><h1> 경기도 안산시 단원구 광덕3로 87(고잔동) 태극빌딩 302호</h1>
-        <br><h2>업      태 |</h2><h1> 건설업​</h1>
-        <br><h2>종      목 |</h2><h1> 비계구조물 해체 공사업​</h1>
-        <br><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소규모 토공사 , 철거</h1>
-        <br><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;인테리어 청소 용역, 건설폐기물처리​</h1>
-        <br><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;건설기계대여</h1>
-      </div>
-      {%elif page == "organization"%}
-      <div class="organization_box">
-        <div class="organization_first_box">
-          <img src="{%static 'web/img/organization_map.jpg'%}">
-        </div>
-        <div class="organization_second_box">
-        </div>
-      </div>
-      {%elif page == "management"%}
-      <div class="management_box">
-        <div class="management_first_box">
-          <h1>“ 능력있게 성실하게 일하자 ”</h1>
-          <br><br><br><br><br>
-          <h2>저희 (주)능성산업개발은 능력있게 성실하게 일하자는 뜻에서 능성을 따왔습니다.​</h2><br>
-          <h2>다른 어느 누구보다도 신뢰할수 있는 가치관을 갖고 일하는 회사임을 확신합니다.​</h2><br>
-          <h2>또한 저희 회사의 가장 중요한 목적은 하나입니다.</h2><br>
-          <h2>꿈입니다. 꿈을 꾸기만 하기보다는 그꿈을 위해 노력하고 앞장서서 나아가는 업체가 되어 </h2><br>
-          <h2>저희들의 고객님들이 저희를 믿고 신뢰하고 만족하며 첫인연이 평생인연이 되어 다시 찾아주실 때 ​</h2><br>
-          <h2>웃으며 만날 수 있는 사람들이 만들어가는 회사 (주)능성산업개발 이었습니다.​</h2><br>
-        </div>
-        <div class="management_second_box">
-        </div>
+        <h1 class="title">㈜보라파이낸셜대부는 늘 고객을​</h1><br>
+        <h1 class="title">최우선으로 합니다.​</h1><br>
+        <h3>언제나 고객만족을 최우선으로 현재까지<br>
+            10만여명의 고객님과 거래하고 있으며<br>
+            신뢰를 최우선으로 생각합니다.</h3><br>
+        <h3>고객중심 경영과 투명경영을 고집하여 대부시장의 선두기업으로<br>
+            서민의 등불로 믿음직한 파트너로서 역할을 다하겠습니다.<br>
+            늘 그래왔듯 고객님께 보다 나은 서비스를 제공하기 위하여<br>
+            끊임없이 노력하여 고객 여러분의 파트너가 될 것을 약속드립니다.</h3><br>
       </div>
       {%elif page == "map"%}
       <div class="map_box">
-          <a target="_blank" href="https://map.naver.com/v5/entry/place/1172093662?c=14117815.7426436,4482838.2601929,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt">
-            <img src="{%static 'web/img/map.png'%}"><br>
+          <a target="_blank" href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9E%A5%EC%95%88%EA%B5%AC%20%EA%B2%BD%EC%88%98%EB%8C%80%EB%A1%9C%20789%20%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%8A%A4%EB%B9%8C%EB%94%A9%202%EC%B8%B5/address/14139663.216851134,4479941.610123185,%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%20%EC%9E%A5%EC%95%88%EA%B5%AC%20%EA%B2%BD%EC%88%98%EB%8C%80%EB%A1%9C%20789,new?c=14139645.9016889,4479946.7582371,19,0,0,0,dh">
+            <img src="{%static 'web/img/map.jpg'%}"><br>
           </a>
           <p>(클릭시 네이버지도 이동)</p>
           <br><br><br><br><br>
           <img src="{%static 'web/img/location_logo.png'%}">
           <h1>찾아오시는 길</h1>
-          <p>경기도 안산시 단원구 광덕3로 87(고잔동) 태극빌딩 302호</p>
-          <p>※ 안산 진흥초등학교 부근</p>
+          <p>경기도 수원시 장안구 경수대로 789 라이온스빌딩 2층</p>
+          <p>※ 수원 교육지원청 부근</p>
           <br><br><br><br>
       </div>
       {%endif%}

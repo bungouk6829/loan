@@ -2,34 +2,33 @@
 {%load static%}
 
 {%block korean%}
-        보유면허
+        투자자모집
 {%endblock%}
 
 {%block english%}
-        Holding License
+        Investor
 {%endblock%}
 
 {%block menu%}
-        <a href="{%url 'web:menu' page='license'%}"><li>보유면허</li></a>
+        <a href="{%url 'web:menu' page='investor'%}"><li>투자자모집</li></a>
 {%endblock%}
 
 <!--컨테이너-->
 {%block page%}
-        | 보유 면허
+        | 투자자 모집
 {%endblock%}
 
 {%block container%}
-    <div class="content_box">
-      <div class="license_img_box">
-        <a class="mg-link" href="{%static 'web/img/license_1.jpg'%}">
-          <img src="{%static 'web/img/license_1.jpg'%}">
-        </a>
-        <a class="mg-link" href="{%static 'web/img/license_2.jpg'%}">
-          <img src="{%static 'web/img/license_2.jpg'%}">
-        </a>
-        <a class="mg-link" href="{%static 'web/img/license_3.jpg'%}">
-          <img src="{%static 'web/img/license_3.jpg'%}">
-        </a>
+  <div class="content_box">
+    <div class="loan_introduce_box">
+      <div class="loan_img_box background-3">
+        <div class="loan_img_text_box">
+          <h1>투자자를 모집합니다.</h1>
+          <br><br>
+          <p style="padding-left:15px;padding-right:15px;">저희 회사에서 투자자를 모집합니다.</p>
+          <p style="padding-left:15px;padding-right:15px;">㈜보라파이낸셜대부에서는 투자자님들의 성향을 파악하여 보다 나은 수익구조를 형성하고 있습니다.</p>
+        </div>
       </div>
     </div>
+  </div>
 {%endblock%}
