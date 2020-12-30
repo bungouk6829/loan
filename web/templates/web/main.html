@@ -41,11 +41,20 @@
             </tr>
             <tr>
               <td>전화번호</td>
-              <td><input type="tel" name="phone_number"></td>
+              <td><input type="text" name="phone_number"></td>
               <td>희망금액(만원)</td>
               <td><input type="number" name="money"></td>
             </tr>
           </table>
+          <br><br><br>
+          <button type="submit">상담신청</button>
+          </form>
+          <form class="main_new_information_form" action="{%url 'web:new_information_post' page='information'%}" method="post">
+            {%csrf_token%}
+          <h1>빠른 대출 문의</h1>
+            <select name="region_1" id="sido1"></select>
+            <select name="region_2" id="gugun1"></select>
+          <br>
           <table class="mobile_main_new_information_table">
             <tr>
               <td>이름</td>
@@ -82,7 +91,7 @@
             </tr>
             <tr>
               <td>전화번호</td>
-              <td><input type="tel" name="phone_number"></td>
+              <td><input type="text" name="phone_number"></td>
             </tr>
           </table>
           <br><br><br>

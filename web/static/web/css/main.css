@@ -221,6 +221,10 @@ display:none; /* 화살표 없애기 for IE10, 11*/
   display: none;
 }
 
+#wrap_section > div > div > div > form:nth-child(2){
+  display:none;
+}
+
 @media all and (max-width:1280px) {
 
   #wrap_section{
@@ -399,6 +403,15 @@ display:none; /* 화살표 없애기 for IE10, 11*/
 
   .map h1, .map p, .tel h1, .tel p, .fax h1, .fax p, .email h1{
     font-size: 15px;
+  }
+
+  #wrap_section > div > div > div > form:nth-child(2){
+    display:block;
+    margin: 0 auto;
+  }
+
+  #wrap_section > div > div > div > form:nth-child(1){
+    display:none;
   }
 
 }

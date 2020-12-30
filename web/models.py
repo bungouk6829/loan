@@ -7,7 +7,7 @@ class Information_post(models.Model):
     money = models.IntegerField(verbose_name='희망금액')
     product = models.CharField(max_length=20, verbose_name='상품')
     job = models.CharField(max_length=20, verbose_name='직업')
-    title = models.CharField(blank=True, null=True, default='',max_length=50, verbose_name='글제목')
+    title = models.CharField(blank=True, null=True, default='',max_length=500, verbose_name='글제목')
     text = models.TextField(blank=True, null=True, default='', max_length=5000, verbose_name='글내용')
     phone_number = models.CharField(max_length=20, verbose_name='전화번호')
     region_1 = models.CharField(max_length=20, verbose_name='시/도')

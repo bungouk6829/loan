@@ -81,10 +81,9 @@ def input_information_post_password(request, page, post_pk, name):
 def new_information_post(request, page):
 
 		if request.method == "POST":
-			if request.POST['title'] == '' or request.POST['title'] == None:
-				request.POST['title'] = '대출 문의합니다.'
-			if request.POST['text'] == '' or request.POST['text'] == None:
-				request.POST['text'] = '대출 문의합니다.'
+			title_data = str(request.POST.get('title','대출문의합니다.'))
+			text_data = str(request.POST.get('text','대출문의합니다.'))
+			password_data = str(request.POST.get('password','1234'))
 			Information_post.objects.create(
 				name=request.POST['name'],
 				age=request.POST['age'],
@@ -93,11 +92,10 @@ def new_information_post(request, page):
 				job=request.POST['job'],
 				region_1=request.POST['region_1'],
 				region_2=request.POST['region_2'],
-				password=request.POST['password'],
+				password=password_data,
 				phone_number=request.POST['phone_number'],
-				title=request.POST['title'],
-				text=request.POST['text'],
-				create_at=timezone.now()
+				title=title_data,
+				text=text_data
 			)
 			information_posts_all = Information_post.objects.all().order_by('-id')
 			page_number = int(request.GET.get('p', 1))
